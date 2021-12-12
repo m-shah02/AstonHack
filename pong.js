@@ -1,5 +1,5 @@
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
 const netWidth = 4;
 const netHeight = canvas.height;
@@ -16,7 +16,7 @@ const net = {
   y: 0,
   width: netWidth,
   height: netHeight,
-  color: "#FFF",
+  color: "#FFF"
 };
 
 // user paddle
@@ -25,8 +25,8 @@ const user = {
   y: canvas.height / 2 - paddleHeight / 2,
   width: paddleWidth,
   height: paddleHeight,
-  color: "#FFF",
-  score: 0,
+  color: '#FFF',
+  score: 0
 };
 
 // AI
@@ -35,8 +35,8 @@ const ai = {
   y: canvas.height / 2 - paddleHeight / 2,
   width: paddleWidth,
   height: paddleHeight,
-  color: "#FFF",
-  score: 0,
+  color: '#FFF',
+  score: 0
 };
 
 // ball
@@ -47,7 +47,7 @@ const ball = {
   speed: 7,
   velocityX: 5,
   velocityY: 5,
-  color: "#05EDFF",
+  color: '#05EDFF'
 };
 
 // Net properties
@@ -58,7 +58,7 @@ function drawNet() {
 
 // Score properties
 function drawScore(x, y, score) {
-  ctx.fillStyle = "#fff";
+  ctx.fillStyle = '#fff';
   ctx.font = "35px sans-serif";
   ctx.fillText(score, x, y);
 }
@@ -75,6 +75,7 @@ function drawBall(x, y, radius, color) {
   ctx.beginPath();
   ctx.arc(x, y, radius, 0, Math.PI * 2, true);
   ctx.closePath();
+  ctx.fill();
 }
 
 // Add an eventListener to browser window
